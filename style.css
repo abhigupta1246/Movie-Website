@@ -1006,3 +1006,9 @@ header section:hover .bi-chevron-left {
         height: 100%;
     }
 }
+
+@media (max-width: 600px) {
+    header section h4 {
+        font-size: 1.25rem;
+    }
+}
