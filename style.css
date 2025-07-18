@@ -35,7 +35,7 @@ header::before {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url('img/money heist1.jpg')no-repeat center center/cover;
+    /* background: url('img/money heist1.jpg')no-repeat center center/cover; */
     opacity: .6;
     z-index: -1;
 }
@@ -67,6 +67,7 @@ header nav {
     align-items: center;
     justify-content: space-between;
     padding: 0px 50px;
+    margin-bottom: 80px; /* Even more space below the navigation bar */
 }
 
 header nav .logo_ul {
@@ -532,7 +533,7 @@ header section:hover .bi-chevron-left {
     z-index: 0;
     background-position: center;
     background-size: cover;
-    filter: blur(8px) brightness(0.5); /* Even weaker blur */
+    filter: blur(4px) brightness(0.7); /* Reduced blur and less dark */
     transition: background-image 0.5s;
     pointer-events: none;
     overflow: hidden;
@@ -545,7 +546,7 @@ header section:hover .bi-chevron-left {
     height: 120%;
     pointer-events: none;
     z-index: 1;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0.65) 100%);
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.40) 100%); /* Lighter shadow */
 }
 
 .movie-detail-glass {
@@ -555,9 +556,9 @@ header section:hover .bi-chevron-left {
     max-width: 500px;
     background: rgba(30, 30, 30, 0.7);
     border-radius: 24px;
-    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.18); /* Lighter shadow */
+    backdrop-filter: blur(4px); /* Reduced blur */
+    -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255,255,255,0.18);
     padding: 32px 32px 24px 32px;
     color: #fff;
@@ -710,5 +711,94 @@ header section:hover .bi-chevron-left {
     header nav .logo_ul ul li a {
         color: #fff !important;
         text-shadow: 0 2px 8px #ffb30099;
+    }
+}
+
+/* Hide the new bar by default, show only on mobile */
+.logo-search-bar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .logo-search-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 18px;
+        padding: 40px 0 32px 0;
+        min-height: 230px;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(120deg, #0f2027 0%, #2c5364 50%, #ff512f 100%);
+        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+        z-index: 10;
+    }
+    header {
+        position: relative;
+        padding-top: 0 !important;
+    }
+    .logo-search-bar .mobile-nav {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        list-style: none;
+        margin: 0 0 10px 0;
+        padding: 0;
+    }
+    .logo-search-bar .mobile-nav li a {
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 6px 12px;
+        border-radius: 12px;
+        transition: background 0.2s;
+    }
+    .logo-search-bar .mobile-nav li a:hover {
+        background: rgba(255,255,255,0.15);
+    }
+    .logo-search-bar .logo-search-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .logo-search-bar .logo-moved {
+        width: 70px;
+        height: auto;
+    }
+    .logo-search-bar input[type="text"] {
+        width: 55vw;
+        max-width: 320px;
+        padding: 14px 22px;
+        border-radius: 24px;
+        border: none;
+        outline: none;
+        font-size: 1.1rem;
+        background: rgba(255,255,255,0.2);
+        color: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .logo-search-bar .user-img-moved {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #fff;
+    }
+
+    /* Hide original logo and search bar and nav on mobile */
+    .logo_ul,
+    .search_user,
+    nav ul {
+        display: none !important;
+    }
+    /* Push content down so it doesn't hide behind the new bar */
+    .content {
+        margin-top: 230px !important;
     }
 }
