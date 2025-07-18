@@ -792,13 +792,82 @@ header section:hover .bi-chevron-left {
     }
 
     /* Hide original logo and search bar and nav on mobile */
-    .logo_ul,
-    .search_user,
-    nav ul {
+    /* .logo_ul, .search_user, nav ul {
         display: none !important;
-    }
+    } */
     /* Push content down so it doesn't hide behind the new bar */
     .content {
         margin-top: 230px !important;
+    }
+}
+
+.logo-search-row {
+    position: relative;
+}
+
+.search-mobile {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+    width: 70vw;
+    max-width: 260px;
+    min-width: 120px;
+    background: rgba(30, 30, 30, 0.98);
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.18);
+    z-index: 9999;
+    max-height: 160px;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.search-mobile .card {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-decoration: none;
+    color: #fff;
+    background: none;
+    transition: background 0.2s;
+}
+
+.search-mobile .card:last-child {
+    border-bottom: none;
+}
+
+.search-mobile .card:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+.search-mobile .card img {
+    width: 32px;
+    height: 44px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-mobile .cont h3 {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 600;
+    color: #fff;
+}
+
+.search-mobile .cont p {
+    font-size: 11px;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .search-mobile {
+        width: 90vw;
+        max-width: 98vw;
+        min-width: 120px;
     }
 }
