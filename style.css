@@ -1012,3 +1012,39 @@ header section:hover .bi-chevron-left {
         font-size: 1.25rem;
     }
 }
+
+@media (min-width: 601px) {
+    header section {
+        position: relative;
+    }
+    header section .bi-chevron-left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: none;
+        opacity: 1 !important;
+        background: rgba(120,120,120,0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: -32px;
+        z-index: 10;
+    }
+    header section .bi-chevron-right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: none;
+        opacity: 1 !important;
+        background: rgba(120,120,120,0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: -32px;
+        z-index: 10;
+    }
+    header section:hover .bi-chevron-left,
+    header section:hover .bi-chevron-right {
+        opacity: 1;
+    }
+}
