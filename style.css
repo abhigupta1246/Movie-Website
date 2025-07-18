@@ -670,6 +670,117 @@ header section:hover .bi-chevron-left {
 }
 
 @media (max-width: 600px) {
+    html, body {
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    header {
+        width: 100vw;
+        height: 100vh;
+        min-width: 100vw;
+        min-height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        padding: 0;
+    }
+    header nav {
+        padding: 0 6px;
+        height: 13%;
+        min-height: 48px;
+        font-size: 13px;
+    }
+    .logo_ul img {
+        width: 54px;
+    }
+    .logo_ul ul li {
+        padding: 2px 6px;
+    }
+    .logo_ul ul li a {
+        font-size: 11px;
+    }
+    .search_user input {
+        padding: 2px 8px;
+        font-size: 12px;
+        margin-right: 8px;
+    }
+    .search_user img {
+        width: 20px;
+        height: 20px;
+    }
+    .content {
+        margin-top: 12px !important;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    .content h1 {
+        font-size: 24px;
+    }
+    .content p {
+        font-size: 10px;
+        width: 90vw;
+    }
+    .content .details h6,
+    .content .details h5,
+    .content .details h4,
+    .content .details h3 {
+        font-size: 9px;
+    }
+    .content .btns a {
+        padding: 6px 10px;
+        font-size: 12px;
+        margin-left: 6px;
+    }
+    header section {
+        padding: 0 6px 0 6px;
+        bottom: 10px;
+    }
+    header section .cards {
+        height: 120px;
+        min-height: 100px;
+    }
+    header section .cards .card {
+        min-width: 90px;
+        height: 110px;
+        margin-right: 6px;
+    }
+    header section .cards .card .poster {
+        border-radius: 6px;
+    }
+    .logo-search-bar {
+        padding: 18px 0 12px 0;
+        min-height: 120px;
+        width: 100vw;
+    }
+    .logo-search-bar .logo-moved {
+        width: 44px;
+    }
+    .logo-search-bar input[type="text"] {
+        width: 60vw;
+        max-width: 180px;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    .logo-search-bar .user-img-moved {
+        width: 32px;
+        height: 32px;
+    }
+    .logo-search-bar .mobile-nav li a {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+    .search-mobile {
+        width: 92vw;
+        max-width: 98vw;
+        min-width: 100px;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
     .movie-detail-wrapper {
         align-items: center !important;
         justify-content: center !important;
@@ -870,5 +981,24 @@ header section:hover .bi-chevron-left {
         width: 90vw;
         max-width: 98vw;
         min-width: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    header section {
+        padding: 0 6px 0 6px;
+        bottom: 10px;
+    }
+    header section .cards {
+        height: 120px;
+        min-height: 100px;
+    }
+    header section .cards .card {
+        min-width: 90px;
+        height: 110px;
+        margin-right: 6px;
+    }
+    header section .cards .card .poster {
+        border-radius: 6px;
     }
 }
