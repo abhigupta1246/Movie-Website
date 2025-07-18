@@ -326,12 +326,13 @@ header .content .btns a {
 }
 
 header section {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     height: auto;
     padding: 0px 50px 0px 50px;
-    bottom: 40px;
+    /* bottom: 40px; */
     color: #fff;
+    margin-top: 56px;
 }
 
 header section .cards {
@@ -733,7 +734,8 @@ header section:hover .bi-chevron-left {
     }
     header section {
         padding: 0 6px 0 6px;
-        bottom: 10px;
+        /* bottom: 10px; */
+        margin-top: 32px;
     }
     header section .cards {
         height: 120px;
@@ -987,18 +989,20 @@ header section:hover .bi-chevron-left {
 @media (max-width: 600px) {
     header section {
         padding: 0 6px 0 6px;
-        bottom: 10px;
+        /* bottom: 10px; */
+        margin-top: 100px;
     }
     header section .cards {
-        height: 120px;
-        min-height: 100px;
+        height: 170px;
+        min-height: 150px;
     }
     header section .cards .card {
-        min-width: 90px;
-        height: 110px;
-        margin-right: 6px;
+        min-width: 130px;
+        height: 160px;
+        margin-right: 8px;
     }
     header section .cards .card .poster {
         border-radius: 6px;
+        height: 100%;
     }
 }
