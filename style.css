@@ -672,7 +672,6 @@ header section:hover .bi-chevron-left {
 
 @media (max-width: 600px) {
     html, body {
-        width: 100vw;
         height: auto !important;
         min-height: 100vh;
         overflow-x: hidden;
@@ -1054,7 +1053,7 @@ header section:hover .bi-chevron-left {
 
 @media (max-width: 600px) {
     header section .cards {
-        max-height: 25vh;
+        max-height: 15vh;
         overflow-y: auto;
         height: auto !important;
         min-height: unset !important;
